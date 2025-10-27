@@ -169,9 +169,4 @@ public class List<T> : IList<T>
             }
         
     }
-
-    internal void Remove<T>(TreeNode<T> child)
-    {
-        throw new NotImplementedException();
-    }
 }

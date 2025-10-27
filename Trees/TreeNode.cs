@@ -79,7 +79,7 @@ namespace Trees
                 }
             }
 
-                return maxHeight; 
+                return 1+maxHeight; 
 
         }
 
@@ -94,7 +94,7 @@ namespace Trees
             TreeNode<T> child = Children.Get(i);
             if (child.Value.Equals(value))
             {
-                Children.Remove(child);
+                Children.Remove(child.Get(i)); ºliñ vi6bf1bypv1yu h
                 return; 
             }
             else
