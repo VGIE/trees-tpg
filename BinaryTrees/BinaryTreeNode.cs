@@ -12,6 +12,9 @@ namespace BinaryTrees
         public BinaryTreeNode(TKey key, TValue value)
         {
             //TODO #1: Initialize member variables/attributes
+
+            Value = value;
+            Key = key;
             
         }
 
