@@ -94,7 +94,7 @@ namespace Trees
             TreeNode<T> child = Children.Get(i);
             if (child.Value.Equals(value))
             {
-                Children.Remove(child.Get(i)); ºliñ vi6bf1bypv1yu h
+                Children.Remove(i); 
                 return; 
             }
             else
@@ -134,7 +134,7 @@ namespace Trees
                 {
                     if (Children.Get(i) == node)
                     {
-                        Children.Remove(node);
+                        Children.Remove(i);
                         return;
                     }
                 }
