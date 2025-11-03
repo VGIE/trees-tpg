@@ -1,5 +1,6 @@
 
 using System;
+using System.Reflection.Metadata.Ecma335;
 namespace BinaryTrees
 {
 
@@ -79,9 +80,19 @@ namespace BinaryTrees
             //          - Create a new tree node with the key/values in the center of the [start,end] section of the arrays
             //          - Recursive call to AddBalanced with the elements on the left of center [start,center-1]. Add the result to the new node as LeftNode
             //          - Recursive call to AddBalanced with the elements on the right of center [center+1,end]. Add the result to the new node as RightNode
-            
-            return null;
-            
+
+            if (start > end)
+            {
+                return null;
+            }
+            BinaryTreeNode<TKey, TValue> newNode = new BinaryTreeNode<TKey, TValue>(keys[(start + end) / 2], values[(start + end) / 2]);
+
+            newNode.LeftChild = AddBalanced(keys, values, start, (start + end) / 2 - 1);
+
+            newNode.RightChild = AddBalanced(keys, values, (start + end) / 2 + 1, end);
+
+            return newNode;
+
         }
 
         public void Balance()
